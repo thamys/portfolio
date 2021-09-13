@@ -1,0 +1,73 @@
+mixin skill(name, ...stars)
+  li.lineSkill
+    span.skill= name
+    .rate
+      each star in stars
+        i.material-icons= star
+      
+mixin jobExperience(logo, jobTitle, company, initDate, endDate)
+  .job
+    img.cpnLogo(src=logo)
+    .info
+      h5.jobTitle= jobTitle
+      h6.company= company
+      span.period Desde #{initDate} até #{endDate}
+
+main.backLayer
+  .navbar
+    a.logo(href="#") thamys guedes.
+    nav.navItems
+      a.navItem.active(href="#") Sobre Mim
+      a.navItem(href="#") Blog
+      a.navItem(href="#") Potfólio
+  .frontLayer
+    .sidebar
+      .profile
+        img.img(src="https://avatars1.githubusercontent.com/u/2211332?s=460&v=4")
+        h6.name Thamyres Guedes
+        span.title UI/UX Designer e Front End Developer
+        span.location Juiz de Fora, Minas Gerais - Brasil
+      .contact
+        a.email(href='mailto:thataguedis@gmail.com')
+          i.material-icons mail_outline
+          | thataguedis@gmail.com
+        a.phone(href='https://api.whatsapp.com/send?phone=5532999503827')
+          i.material-icons whatsapp
+          | +55 (32) 99950-3827
+      .socialMedias
+        a.link-icon(href="https://github.com/thamys")
+          i.fab.fa-github
+        a.link-icon(href="https://codepen.io/thamysg")
+          i.fab.fa-codepen
+        a.link-icon(href="https://www.linkedin.com/in/thamyres-guedes-reis-correa/")
+          i.fab.fa-linkedin-in
+    .content
+      .about
+        h5.title Sobre Mim
+        p Atuo no mercado de trabalho, na Área de tecnologia já a mais de sete anos. Trabalho desenvolvendo User Interfaces para sites, sistemas e aplicativos, aplicando conceitos de UX. Além disso atuo como Front End developer para sites e sistemas web.
+
+        p Tenho conhecimento das principais ferramentas de diagramação como Photoshop, Illustrator e Sketch, além de experiência na utilização de pré-compiladores como Sass, Less e Pug. Facilidade para aprender novas tecnologias e trabalhar em equipe.
+      .skills
+        h5.title Skills
+        ul.listSkills
+          +skill('HTML5', 'star', 'star', 'star', 'star', 'star')
+          +skill('CSS3', 'star', 'star', 'star', 'star', 'star')
+          +skill('Javascript', 'star', 'star', 'star', 'star', 'star_half')
+          +skill('Typescript', 'star', 'star', 'star', 'star_half', 'star_border')
+          +skill('React.JS', 'star', 'star', 'star', 'star', 'star_half')
+          +skill('Next.JS', 'star', 'star', 'star', 'star', 'star_half')
+          +skill('Node.JS', 'star', 'star', 'star', 'star_border', 'star_border')
+          +skill('PHP', 'star', 'star', 'star', 'star_half', 'star_border')
+          +skill('Laravel', 'star', 'star', 'star', 'star_border', 'star_border')
+          +skill('Pug', 'star', 'star', 'star', 'star', 'star_half')
+          +skill('Sass, Less', 'star', 'star', 'star', 'star_half', 'star_border')
+          +skill('React Hooks', 'star', 'star', 'star', 'star', 'star_half')
+          +skill('Redux', 'star', 'star', 'star', 'star', 'star_border')
+      .professionalXP
+        h5.title Experiência Profissional
+        .timeline
+          +jobExperience('https://media-exp1.licdn.com/dms/image/C4E0BAQFcynlEptA3tA/company-logo_100_100/0/1519877461440?e=1639612800&v=beta&t=6d60IM_Ibsy7pkRjm0C0Knvn0dMckdNL8WVizLM_g7g', 'Full-Stack Developer', 'App Masters', 'Novembro 2020', 'agora')
+          +jobExperience('https://media-exp1.licdn.com/dms/image/C560BAQGEFVWpeMpRTg/company-logo_100_100/0/1561066490198?e=1639612800&v=beta&t=-5EVrQLEp_2jii5r1sNgJiOuxVkK4pROpn01lr65g5M', 'CEO/Founder', 'Yunikon', 'Maio de 2019', 'Agosto 2020')
+          +jobExperience('https://media-exp1.licdn.com/dms/image/C4E0BAQGtN8wwJINjeA/company-logo_100_100/0/1626378961388?e=1639612800&v=beta&t=WNQDRgdzrddjkD-IqW3ZIsWivHoR_dum41Q4yKwpOGU', 'UI/UX Designer e Front End Developer', 'eMiolo.com Soluções em Internet Ltda.', 'Setembro de 2015', 'Abril 2019')
+          +jobExperience('http://via.placeholder.com/300', 'Analista de Infraestrutura', 'Brasilcenter Telecominicações', 'Fevereiro de 2014', 'Agosto 2015')
+          +jobExperience('https://media-exp1.licdn.com/dms/image/C510BAQEpGR5fQiIUgQ/company-logo_100_100/0/1519894927066?e=1639612800&v=beta&t=_4iDxqa3UwrvL3bxGcHvAIQM-oDnIC-PiYYGSQTgI_k', 'Web Designer', 'Aprimorar Desenvolvimento', 'Agosto de 2011', 'Outubro 2014')
