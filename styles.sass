@@ -33,8 +33,11 @@ body
 .navbar
   flex-direction: row
   justify-content: space-between
+  @media(max-width: 600px)
+    flex-direction: column
+    align-items: center
 
-.logo, .navItems, .search
+.logo, .navItems
   padding: 16px
 
 .logo
@@ -62,12 +65,17 @@ body
   flex-direction: row
   min-height: 100vh
   border-radius: 15px
+  @media(max-width: 600px)
+    flex-direction: column
 
 .sidebar
   background-color: var(--color-surface-base)
   flex-basis: 30vw
   min-height: 100vh
   padding: 0 16px
+  @media(max-width: 600px)
+    min-height: auto
+    padding: 16px 16px 24px
 .profile
   align-items: center
   flex:
@@ -155,6 +163,8 @@ body
 .listSkills
   flex: 1
   flex-direction: row
+  @media(max-width: 600px)
+    flex-direction: column
 .lineSkill
   align-items: center
   color: rgba(0, 0, 0, 0.54)
@@ -200,6 +210,9 @@ body
     height: 80px
     width: 80px
     margin-right: 16px
+    @media(max-width: 600px)
+      height: 60px
+      width: 60px
   .info
     flex: 1
     .jobTitle

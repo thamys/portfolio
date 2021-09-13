@@ -13,6 +13,6 @@
   "scripts": {
     "dev": "./node_modules/.bin/pug.cmd --watch --pretty index.pug",
     "sass": "./node_modules/.bin/sass.cmd --watch styles.sass styles.css",
-    "build": "./node_modules/.bin/pug.cmd index.pug && ./node_modules/.bin/sass.cmd --style=compressed styles.sass styles.css"
+    "build": "./node_modules/.bin/pug.cmd index.pug --silent && ./node_modules/.bin/sass.cmd --style=compressed styles.sass styles.css"
   }
 }
